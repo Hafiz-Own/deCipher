@@ -1,0 +1,279 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to bottom, #5491d6, #fefefe);
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    /* Ensure space between elements */
+    align-items: center;
+    padding: 0 1rem;
+    /* Add padding to keep contents from touching edges */
+    background: linear-gradient(to bottom, #5491d6, #fefefe);
+    border-bottom: 1px solid rgb(244, 0, 0);
+}
+
+/* Settings Icon */
+
+.settings-icon {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.h1 {
+    margin-left: calc(50vw - 93px);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    /* top: 100%; */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    /* Fixed width for the dropdown */
+}
+
+.dropdown.hide {
+    display: none;
+}
+
+/* Theme Styles
+body.dark-theme {
+    background: radial-gradient(circle, rgb(51, 33, 33),rgb(81, 107, 129));
+    /* color: white; */
+/* } */
+
+/* body.light-theme {
+    background-color: #fff;
+    color: black;
+}  */
+
+/* Loader Styles */
+.loader {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(#ff0f0f, #c31389);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin: 50px auto;
+    /* Center the loader */
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Input Styles */
+.input {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 26rem);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.box {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 5rem;
+    border: 2px solid black;
+    background: radial-gradient(rgb(243, 239, 233), rgb(188, 218, 246));
+}
+
+.win {
+    background: #66d729;
+    color: whitesmoke;
+}
+
+.close {
+    background: orange;
+}
+
+.warning {
+    animation: warning-border 0.35s ease-in-out 2;
+}
+
+@keyframes warning-border {
+    50% {
+        border-color: red;
+        border-width: 2px;
+    }
+
+    100% {
+        border-color: red;
+        border-width: 3px;
+    }
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.input-animation {
+    animation: input 0.2s ease-in-out;
+}
+
+@keyframes input {
+    0% {
+        transform: translateY(0);
+        border: 0.2rem solid black;
+    }
+
+    100% {
+        transform: translateY(-5px);
+        border: 0.2rem solid black;
+    }
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Above other elements */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Replay Button */
+.replay-btn {
+    background-color: #4CAF50;
+    /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.replay-btn:hover {
+    background-color: #45a049;
+}
+
+.slide {
+    padding: 1rem;
+    position: absolute;
+    right: -17rem;
+    font-size: 2rem;
+    color: red;
+    background-color: rgb(21, 21, 157);
+    border-radius: 1rem;
+    animation: slidein 2.5s ease-out;
+}
+
+@keyframes slidein {
+    50% {
+        transform: translateX(-17rem);
+    }
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background: #121212; /* Dark background for body */
+    color: #e0e0e0; /* Light text color for better readability */
+}
+
+/* Header Styles for Dark Theme */
+.header.dark-theme {
+    background: linear-gradient(to bottom, #1c1c1c, #121212); /* Dark gradient for header */
+    border-bottom: 1px solid #333; /* Subtle border for header */
+}
+
+/* Dropdown Menu Styles for Dark Theme */
+.dropdown.dark-theme {
+    background: linear-gradient(to bottom, #222222, #1e1e1e); /* Dark gradient for dropdown */
+    border: 1px solid #333; /* Subtle border for dropdown */
+}
+
+/* Box Styles for Dark Theme */
+.box.dark-theme {
+    background: linear-gradient(to bottom, #2a2a2a, #1e1e1e); /* Gradient for boxes */
+    border: 2px solid #333; /* Border color to match dark theme */
+    color: #e0e0e0; /* Text color to match dark theme */
+}
+
+/* Modal Background and Content for Dark Theme */
+.modal.dark-theme {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker modal background */
+}
+
+.modal-content.dark-theme {
+    background: linear-gradient(to bottom, #232323, #1e1e1e); /* Dark gradient for modal content */
+    color: #e0e0e0; /* Light text color for modal content */
+}
+
+/* Adjust Loader Animation for Dark Theme */
+.loader.dark-theme {
+    background: radial-gradient(circle, #ff4d4d, #c31389); /* Enhanced loader style with gradient */
+}
+
+/* Close State Styles for Dark Theme */
+.close.dark-theme {
+    background: #c73c37; /* Background color for close state */
+    color: #fff; /* Text color for close state */
+}
+
+/* Win State Styles for Dark Theme */
+.win.dark-theme {
+    background: #89c02b; /* Background color for win state */
+    color: #fff; /* Text color for win state */
+}
