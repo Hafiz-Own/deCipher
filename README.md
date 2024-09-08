@@ -31,33 +31,16 @@ To get started with **DeCipher It!**, follow these steps:
 
     Open index.html in your preferred web browser to start playing.
 
-How to Play
+## How to Play
 
-    Input Letters: Use your keyboard to input letters. Each row allows you to input 5 letters.
-    Submit Guess: Press "Enter" to submit your guess. The game will provide feedback on your guess.
-    Backspace: Use the "Backspace" key to correct your current word input.
-    Toggle Settings: Click the settings icon to switch between "Word of the Day" and "Random" word sources.
+1. **Input Letters**: Type letters using your keyboard. Each row accommodates exactly 5 letters. Your current input will be displayed in the boxes.
 
-Game Controls
+2. **Submit Guess**: Press the "Enter" key to submit your guess. The game will provide feedback by marking each letter:
+   - **Green** for correct letters in the correct position.
+   - **Yellow** for correct letters in the wrong position.
+   - **Red** for incorrect letters.
 
-    Settings Icon: Toggles the dropdown menu to change the word source.
-    Theme Toggle Button: Switches between light and dark themes.
-    Enter Key: Submits the current guess.
-    Backspace Key: Removes the last entered letter.
+3. **Backspace**: Use the "Backspace" key to remove the last entered letter and correct your input.
 
-Dependencies
-
-    No external dependencies are required for this project. It is built using plain HTML, CSS, and JavaScript.
-
-Contributing
-
-If you would like to contribute to DeCipher It!, feel free to fork the repository and submit a pull request with your changes. Please make sure to follow the project's coding style and test your changes thoroughly.
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments
-
-    Thanks to the Words API for providing word data.
-    Inspired by classic word puzzle games.
-
+4. **Toggle Settings**: Click the settings icon to choose between the "Word of the Day" or "Random" word sources. This setting determines the word you are trying to guess.
 
